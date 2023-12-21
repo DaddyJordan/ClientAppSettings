@@ -12,7 +12,7 @@
   "FFlagCommitToGraphicsQualityFix": true, // Commits to maintaining the graphics quality.
 
   // Physics & Client-Side Settings.
-  "DFIntS2PhysicsSenderRate": 250,
+  "DFIntS2PhysicsSenderRate": 300,
   "DFIntClientLightingTechnologyChangedTelemetryHundredthsPercent": 0,
 
   // Crash Reporting & Analytics URLs (Set to null for privacy)
