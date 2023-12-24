@@ -3,45 +3,26 @@
   "DFIntTaskSchedulerTargetFps": 144, // Set by Jordn for an optimal balance between performance and visual fluidity.
 
   // Fullscreen & Font Settings.
-  "FFlagHandleAltEnterFullscreenManually": false, // Manually handle Alt+Enter fullscreen toggle.
-  "FFlagPreloadAllFonts": true, // Preloads all fonts for faster rendering.
+  "FFlagHandleAltEnterFullscreenManually": false,
+  "FFlagPreloadAllFonts": true,
 
   // Graphics & Rendering Optimizations.
   "FFlagFastGPULightCulling3": true, // GPU light culling for enhanced rendering efficiency.
   "FFlagFixGraphicsQuality": true, // Ensures high graphics quality, configured by Jordn.
   "FFlagCommitToGraphicsQualityFix": true, // Commits to maintaining the graphics quality.
 
-  // In-Game Menu & UI Enhancements.
-  "FFlagDisableNewIGMinDUA": true, // Disables new in-game menu for user interface consistency.
-  "FFlagEnableInGameMenuControls": true, // Enables modernized controls in the in-game menu.
-  "FFlagEnableInGameMenuModernization": true, // Modernizes the in-game menu interface.
-  "FFlagEnableMenuControlsABTest": false, // AB testing for new menu controls, currently disabled.
-  "FFlagEnableMenuModernizationABTest": false, // AB testing for menu modernization, currently disabled.
-  "FFlagEnableMenuModernizationABTest2": false, // Secondary AB testing for menu modernization, disabled.
-  "FFlagEnableV3MenuABTest3": false, // Tertiary AB testing for V3 menu, disabled.
-
   // Physics & Client-Side Settings.
   "DFIntS2PhysicsSenderRate": 300,
   "DFIntClientLightingTechnologyChangedTelemetryHundredthsPercent": 0,
-
-  // Debug & Logging.
-  "FLogNetwork": "7", // Sets network logging level to 7 for detailed insights.
 
   // Crash Reporting & Analytics URLs (Set to null for privacy)
   "DFStringCrashUploadToBacktraceBaseUrl": "null",
   "DFStringCrashUploadToBacktraceMacPlayerToken": "null",
   "DFStringCrashUploadToBacktraceWindowsPlayerToken": "null",
-
-  // Telemetry Settings. (Configured for Minimal Telemetry.)
-  "FFlagDebugDisableTelemetryEphemeralCounter": true,
-  "FFlagDebugDisableTelemetryEphemeralStat": true,
-  "FFlagDebugDisableTelemetryEventIngest": true,
-  "FFlagDebugDisableTelemetryPoint": true,
-  "FFlagDebugDisableTelemetryV2Counter": true,
-  "FFlagDebugDisableTelemetryV2Event": true,
-  "FFlagDebugDisableTelemetryV2Stat": true,
-  "DFStringHttpPointsReporterUrl": "null",
-  "DFStringAltHttpPointsReporterUrl": "null",
+  "GoogleAnalyticsAccountPropertyID": "null",
+  "GoogleAnalyticsAccountPropertyIDPlayer": "null",
+  "FStringCoreScriptBacktraceErrorUploadToken": "null",
+  "FStringGamesUrlPath": "/games/",
 
   // Network Metrics & Browser Tracker Settings.
   "DFFlagBaseNetworkMetrics": false,
@@ -55,6 +36,17 @@
   "DFStringLightstepHTTPTransportUrlHost": "null",
   "DFStringLightstepHTTPTransportUrlPath": "null",
   "DFStringLightstepToken": "null",
+
+  // Telemetry Settings. (Configured for Minimal Telemetry.)
+  "FFlagDebugDisableTelemetryEphemeralCounter": true,
+  "FFlagDebugDisableTelemetryEphemeralStat": true,
+  "FFlagDebugDisableTelemetryEventIngest": true,
+  "FFlagDebugDisableTelemetryPoint": true,
+  "FFlagDebugDisableTelemetryV2Counter": true,
+  "FFlagDebugDisableTelemetryV2Event": true,
+  "FFlagDebugDisableTelemetryV2Stat": true,
+  "DFStringHttpPointsReporterUrl": "null",
+  "DFStringAltHttpPointsReporterUrl": "null",
 
   // GPU Optimization Settings. (Enhanced by Jordn.)
   "FFlagGpuGeometryManager3": true, // Efficient geometry management on GPU.
@@ -91,9 +83,6 @@
   "FFlagGraphicsCheckComputeSupport": true,
   "FFlagGraphicsTextureCopy": true,
   "FFlagGraphicsDeviceEvents": true,
-
-  // Render Technology Settings.
-  "DFFlagDebugRenderForceTechnologyVoxel": true, // Forces voxel rendering technology for debug purposes.
 
   // Telemetry & Analytics Adjustments. (Configured by Jordn.)
   "DFFlagESGamePerfMonitorEnabled": false,
