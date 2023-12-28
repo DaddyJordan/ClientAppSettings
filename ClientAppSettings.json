@@ -1,19 +1,36 @@
 {
-  // Frame Rate Configuration.
-  "DFIntTaskSchedulerTargetFps": 144, // Set by Jordn for an optimal balance between performance and visual fluidity.
+  // Frame Rate & System Configuration
+  "DFIntTaskSchedulerTargetFps": 240,
 
-  // Fullscreen & Font Settings.
-  "FFlagHandleAltEnterFullscreenManually": false,
-  "FFlagPreloadAllFonts": true,
+  // Fullscreen & Font Settings
+  "FFlagHandleAltEnterFullscreenManually": false, // Manual handling of fullscreen toggling.
+  "FFlagPreloadAllFonts": true, // Preload all fonts for faster text rendering.
 
-  // Graphics & Rendering Optimizations.
-  "FFlagFastGPULightCulling3": true, // GPU light culling for enhanced rendering efficiency.
-  "FFlagFixGraphicsQuality": true, // Ensures high graphics quality, configured by Jordn.
-  "FFlagCommitToGraphicsQualityFix": true, // Commits to maintaining the graphics quality.
+  // Graphics, Rendering & GPU Optimizations
+  "FFlagFastGPULightCulling3": true,
+  "FFlagFixGraphicsQuality": false,
+  "FFlagCommitToGraphicsQualityFix": false,
+  "FFlagGpuGeometryManager7": true,
+  "FFlagRenderGpuTextureCompressor": true,
+  "FFlagGraphicsCheckComputeSupport": true,
+  "FFlagGraphicsTextureCopy": true,
+  "FFlagGraphicsDeviceEvents": true,
 
-  // Physics & Client-Side Settings.
-  "DFIntS2PhysicsSenderRate": 300,
-  "DFIntClientLightingTechnologyChangedTelemetryHundredthsPercent": 0,
+  // Physics, Client-Side & Network Optimizations
+  "DFIntS2PhysicsSenderRate": 500,
+  "DFIntRakNetDatagramMessageIdArrayLength": 2048,
+  "DFIntRakNetResendBufferArrayLength": 2048,
+  "DFFlagRakNetUseSlidingWindow4": true,
+  "DFIntRakNetMtuValue1InBytes": 1500,
+  "DFIntRakNetNakResendDelayMs": 10,
+  "DFIntRakNetNakResendDelayMsMax": 50,
+  "DFIntRakNetNakResendDelayRttPercent": 25,
+
+  // Memory & Resource Management
+  "FIntTerrainOTAMaxTextureSize": 1024, // Reduced for performance
+  "FIntUITextureMaxRenderTextureSize": 1024, // Reduced for performance
+  "FIntMeshContentProviderForceCacheSize": 268435456, // Half of original for balance
+  "FIntDefaultMeshCacheSizeMB": 256, // Half of original for balance
 
   // Crash Reporting & Analytics URLs (Set to null for privacy)
   "DFStringCrashUploadToBacktraceBaseUrl": "null",
@@ -24,20 +41,7 @@
   "FStringCoreScriptBacktraceErrorUploadToken": "null",
   "FStringGamesUrlPath": "/games/",
 
-  // Network Metrics & Browser Tracker Settings.
-  "DFFlagBaseNetworkMetrics": false,
-  "DFFlagBrowserTrackerIdTelemetryEnabled": false,
-  "DFStringRobloxAnalyticsURL": "null",
-  "DFStringTelegrafHTTPTransportUrl": "null",
-  "DFStringAltTelegrafHTTPTransportUrl": "null",
-  "DFStringTelemetryV2Url": "null",
-  "DFFlagEnableLightstepReporting2": false,
-  "DFIntLightstepHTTPTransportHundredthsPercent2": 0,
-  "DFStringLightstepHTTPTransportUrlHost": "null",
-  "DFStringLightstepHTTPTransportUrlPath": "null",
-  "DFStringLightstepToken": "null",
-
-  // Telemetry Settings. (Configured for Minimal Telemetry.)
+  // Telemetry & Analytics (Configured for Minimal Impact)
   "FFlagDebugDisableTelemetryEphemeralCounter": true,
   "FFlagDebugDisableTelemetryEphemeralStat": true,
   "FFlagDebugDisableTelemetryEventIngest": true,
@@ -45,51 +49,63 @@
   "FFlagDebugDisableTelemetryV2Counter": true,
   "FFlagDebugDisableTelemetryV2Event": true,
   "FFlagDebugDisableTelemetryV2Stat": true,
-  "DFStringHttpPointsReporterUrl": "null",
-  "DFStringAltHttpPointsReporterUrl": "null",
+  
+  // Performance Enhancements & System Optimizations
+  "FFlagUseDirectX12": true,
+  "FFlagEnableShaderCache": true,
+  "FFlagAnimationClipMemCacheEnabled": true,
+  "DFFlagQueueDataPingFromSendData": true,
+  "FFlagDontCreatePingJob": true,
+  "FFlagEnableAudioOutputDevice": true,
 
-  // GPU Optimization Settings. (Enhanced by Jordn.)
-  "FFlagGpuGeometryManager3": true, // Efficient geometry management on GPU.
-  "FFlagRenderGpuTextureCompressor": true, // GPU-based texture compression.
+  // Network & Security Settings
+  "DFStringCrashUploadToBacktraceBaseUrl": "null", // Base URL for crash upload to Backtrace.
+  "DFStringCrashUploadToBacktraceMacPlayerToken": "null", // Mac player token for Backtrace.
+  "DFStringCrashUploadToBacktraceWindowsPlayerToken": "null", // Windows player token for Backtrace.
+  "DFFlagClientBaseNetworkMetrics": false, // Base network metrics flag.
+  "DFStringTelegrafHTTPTransportUrl": "null", // URL for Telegraf HTTP transport.
+  "DFStringAltTelegrafHTTPTransportUrl": "null", // Alternate URL for Telegraf HTTP transport.
+  "DFStringTelegrafAddress": "127.0.0.1", // Telegraf address.
+  "DFStringAltTelegrafAddress": "127.0.0.1", // Alternate Telegraf address.
+  "DFStringHttpPointsReporterUrl": "null", // URL for HTTP points reporter.
+  "DFStringAltHttpPointsReporterUrl": "null", // Alternate URL for HTTP points reporter.
+
+  // Browser & Audio Enhancements
+  "DFFlagDisableBrowserCore": true,
+  "FFlagUseNewAudioLoading": true,
+  "FFlagOptimizeDFForAsyncLoading": true,
+
+  // Rendering & Animation Optimizations
+  "FFlagNewAnimInstance": true,
+  "FFlagRigGeometry": true,
+  "FFlagEnableAnimationsV3": true,
+  "FFlagEnableTextureStreamingV2": true,
+
+  // Localization & Character Animation
+  "DFFlagUseNewLocalizationSetup": true,
+  "DFFlagForceNewAvatarAnimations": true,
+  "FFlagLoadCharacterClothingAssets": false,
+  
+  // Memory & Resource Management
+  "FFlagUseScannedHeapForMemoryViewer": true,
+  "FFlagNewAppStorage": true,
+
+  // Lua Scripting Enhancements
+  "FFlagNewLuaPerfTemp": true,
+  "FFlagEnableLuaSignal": true,
+  "DFFlagEnableDependentLuaSignal": true,
+  "DFFlagEnableLuaSignalGC": true,
+
+  // Occlusion & Scene Management
+  "DFFlagUseNewOcclusionSystem": true,
+  "FFlagFastSpawnDeserialization": true,
+
+  // Data Storage & Management
+  "FFlagNewSaveInstance": true,
+  "FFlagNewAnimationDataV2": true,
+  "FFlagEnableSaveSlots": false,
 
   // Texture Settings. (Chosen by Jordn.)
   "FStringPartTexturePackTablePre2022": "{\u0022foil\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[255,255,255,255]},\u0022brick\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[204,201,200,232]},\u0022cobblestone\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[212,200,187,250]},\u0022concrete\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[208,208,208,255]},\u0022diamondplate\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[170,170,170,255]},\u0022fabric\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[105,104,102,244]},\u0022glass\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[254,254,254,7]},\u0022granite\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[113,113,113,255]},\u0022grass\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[165,165,159,255]},\u0022ice\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[255,255,255,255]},\u0022marble\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[199,199,199,255]},\u0022metal\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[199,199,199,255]},\u0022pebble\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[208,208,208,255]},\u0022corrodedmetal\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[159,119,95,200]},\u0022sand\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[220,220,220,255]},\u0022slate\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[193,193,193,255]},\u0022wood\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[227,227,227,255]},\u0022woodplanks\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[212,209,203,255]},\u0022asphalt\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[123,123,123,234]},\u0022basalt\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[154,154,153,238]},\u0022crackedlava\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[74,78,80,156]},\u0022glacier\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[226,229,229,243]},\u0022ground\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[114,114,112,240]},\u0022leafygrass\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[121,117,113,234]},\u0022limestone\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[235,234,230,250]},\u0022mud\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[130,130,130,252]},\u0022pavement\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[142,142,144,236]},\u0022rock\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[154,154,154,248]},\u0022salt\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[220,220,221,255]},\u0022sandstone\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[174,171,169,246]},\u0022snow\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[218,218,218,255]}}", // Defines texture pack settings prior to 2022.
   "FStringPartTexturePackTable2022": "{\u0022foil\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[255,255,255,255]},\u0022brick\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[204,201,200,232]},\u0022cobblestone\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[212,200,187,250]},\u0022concrete\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[208,208,208,255]},\u0022diamondplate\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[170,170,170,255]},\u0022fabric\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[105,104,102,244]},\u0022glass\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[254,254,254,7]},\u0022granite\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[113,113,113,255]},\u0022grass\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[165,165,159,255]},\u0022ice\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[255,255,255,255]},\u0022marble\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[199,199,199,255]},\u0022metal\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[199,199,199,255]},\u0022pebble\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[208,208,208,255]},\u0022corrodedmetal\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[159,119,95,200]},\u0022sand\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[220,220,220,255]},\u0022slate\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[193,193,193,255]},\u0022wood\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[227,227,227,255]},\u0022woodplanks\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[212,209,203,255]},\u0022asphalt\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[123,123,123,234]},\u0022basalt\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[154,154,153,238]},\u0022crackedlava\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[74,78,80,156]},\u0022glacier\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[226,229,229,243]},\u0022ground\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[114,114,112,240]},\u0022leafygrass\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[121,117,113,234]},\u0022limestone\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[235,234,230,250]},\u0022mud\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[130,130,130,252]},\u0022pavement\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[142,142,144,236]},\u0022rock\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[154,154,154,248]},\u0022salt\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[220,220,221,255]},\u0022sandstone\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[174,171,169,246]},\u0022snow\u0022:{\u0022ids\u0022:[\u0022rbxassetid://0\u0022,\u0022rbxassetid://0\u0022],\u0022color\u0022:[218,218,218,255]}}", // Defines texture pack settings for 2022 onwards.
-
-  // Memory & Texture Management. (Optimized by Jordn.)
-  "FIntTerrainOTAMaxTextureSize": 2048, // Enhanced terrain texture quality.
-  "FIntUITextureMaxRenderTextureSize": 2048, // Improved UI texture clarity.
-  "FIntMeshContentProviderForceCacheSize": 536870912, // Expanded mesh content cache.
-  "FIntDefaultMeshCacheSizeMB": 512, // Increased mesh cache size for performance.
-
-  // Network Optimizations. (Fine-tuned by Jordn.)
-  "FIntRakNetDatagramMessageIdArrayLength": 2048, // Capacity for more network messages.
-  "FIntRakNetResendBufferArrayLength": 2048, // Enhanced network resilience.
-  "DFIntRakNetMtuValue1InBytes": 1500, // Standard MTU size.
-  "DFIntRakNetMtuValue2InBytes": 1492, // Optimized for network stability.
-  "DFIntRakNetMtuValue3InBytes": 1480, // Further network stability tuning.
-  "DFIntRakNetNakResendDelayMs": 30, // Responsiveness and stability balance.
-  "DFIntRakNetNakResendDelayMsMax": 200, // Max delay for network stability.
-  "DFIntRakNetNakResendDelayRttPercent": 50,
-  "DFFlagRakNetUseSlidingWindow4": true,
-
-  // System Optimizations. (Enhanced by Jordn.)
-  "DFIntHttpCurlConnectionCacheSize": 134217728, // Increased connection cache size.
-  "FFlagAnimationClipMemCacheEnabled": true, // Animation clip memory caching.
-  "DFFlagQueueDataPingFromSendData": true,
-  "FFlagDontCreatePingJob": true,
-  "FFlagEnableAudioOutputDevice": true,
-  "FFlagGpuGeometryManager7": true, // Advanced GPU geometry management.
-  "FFlagGraphicsCheckComputeSupport": true,
-  "FFlagGraphicsTextureCopy": true,
-  "FFlagGraphicsDeviceEvents": true,
-
-  // Telemetry & Analytics Adjustments. (Configured by Jordn.)
-  "DFFlagESGamePerfMonitorEnabled": false,
-  "DFFlagEnableHardwareTelemetry": false,
-  "DFIntHardwareTelemetryHundredthsPercent": 0,
-
-  // Performance Enhancements. (Introduced by Jordn.)
-  "FFlagUseDirectX12": true, // DirectX 12 support for compatible GPUs.
-  "FFlagEnableShaderCache": true // Shader caching for performance improvements.
 }
