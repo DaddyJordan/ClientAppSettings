@@ -13,6 +13,7 @@
   "FFlagGlobalWindRendering": false, // Removes wind.
   "FFlagGlobalWindActivated": false, // Removes wind.
   "FIntRenderShadowIntensity": 0, // No shadows.
+  "FIntDebugForceMSAASamples": 0, // Disables Antiliasing.
   "FFlagFastGPULightCulling3": true, // GPU light culling for enhanced rendering efficiency.
   "FFlagFixGraphicsQuality": true, // Ensures high graphics quality, configured by Jordn.
   "FFlagCommitToGraphicsQualityFix": true, // Commits to maintaining the graphics quality.
