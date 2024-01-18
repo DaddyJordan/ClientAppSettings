@@ -9,6 +9,10 @@
   "FFlagPreloadAllFonts": true,
 
   // Graphics & Rendering Optimizations.
+  "FFlagDebugSkyGray": true, // Adds a gray sky.
+  "FFlagGlobalWindRendering": false, // Removes wind.
+  "FFlagGlobalWindActivated": false, // Removes wind.
+  "FIntRenderShadowIntensity": 0, // No shadows.
   "FFlagFastGPULightCulling3": true, // GPU light culling for enhanced rendering efficiency.
   "FFlagFixGraphicsQuality": true, // Ensures high graphics quality, configured by Jordn.
   "FFlagCommitToGraphicsQualityFix": true, // Commits to maintaining the graphics quality.
@@ -40,6 +44,7 @@
   "DFStringLightstepToken": "null",
 
   // Telemetry Settings. (Configured for Minimal Telemetry.)
+  "FFlagAdServiceEnabled": false,
   "FFlagDebugDisableTelemetryEphemeralCounter": true,
   "FFlagDebugDisableTelemetryEphemeralStat": true,
   "FFlagDebugDisableTelemetryEventIngest": true,
